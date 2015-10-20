@@ -1,0 +1,18 @@
+-main Test.hx
+-cpp cpp/
+-cp ../
+# pick a target
+#-D mac
+#-D windows
+-D linux
+
+-lib linc_stb
+
+# To build 32 or 64 bit
+#(if not using the default for your platform):
+
+-D HXCPP_M64
+#-D HXCPP_M32
+
+#-cmd ./cpp/Test-debug
+#-cmd ./cpp/Test.exe

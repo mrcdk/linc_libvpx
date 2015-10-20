@@ -1,0 +1,85 @@
+<xml>
+
+    <files id='haxe'>
+
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/lib/build/'/>
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/lib/libvpx/'/>
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/lib/libvpx/vpx/'/>
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/'/>
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/include'/>
+
+        <compilerflag value='-I${LINC_LIBVPX_PATH}/linc/'/>
+
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/md5_utils.c'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/args.c'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/ivfdec.c'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/y4menc.c'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/warnings.c'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/webmdec.cc'/>
+        <file name='${LINC_LIBVPX_PATH}/lib/libvpx/tools_common.c'/>
+
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/mkvmuxer.cpp"/>
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/mkvmuxerutil.cpp"/>
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/mkvwriter.cpp"/>
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/mkvparser.cpp"/>
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libwebm/mkvreader.cpp"/>
+
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare_common.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare_neon64.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare_neon.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare_posix.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/compare_win.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_argb.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_from_argb.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_from.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_jpeg.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_to_argb.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/convert_to_i420.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/cpu_id.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/mjpeg_decoder.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/mjpeg_validate.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/planar_functions.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/rotate_argb.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/rotate.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/rotate_mips.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/rotate_neon64.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/rotate_neon.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_any.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_common.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_mips.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_neon64.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_neon.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_posix.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_win.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_argb.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_common.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_mips.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_neon64.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_neon.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_posix.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/scale_win.cc" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/video_common.cc" />
+
+        <!--
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/row_x86.asm" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/libyuv/source/x86inc.asm" />
+        <file name="${LINC_LIBVPX_PATH}/lib/libvpx/third_party/x86inc/x86inc.asm" />
+        -->
+
+        <file name='${LINC_LIBVPX_PATH}/linc/linc_libvpx.cpp'/>
+
+    </files>
+
+    <target id="haxe">
+
+      <section if="linux">
+        <lib name='${LINC_LIBVPX_PATH}/lib/lib/Linux64/libvpx.a' />
+      </section>
+
+
+    </target>
+
+</xml>
