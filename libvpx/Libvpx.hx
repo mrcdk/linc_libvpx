@@ -30,8 +30,8 @@ extern class CodecInterface {}
 @:include('linc_libvpx.h') @:native("::vpx_codec_dec_cfg")
 extern class CodecDecCfg {
   var threads:UInt32;
-  var w:Uint32;
-  var h:Uint32;
+  var w:UInt32;
+  var h:UInt32;
 }
 
 
@@ -39,8 +39,8 @@ typedef CodecConfig = {
   var dec:CodecDecCfg;
 }
 
-@:Enum
-enum CodecError(Int) from Int to Int {
+@:enum
+abstract CodecError(Int) from Int to Int {
   /*!\brief Operation completed without error */
   var VPX_CODEC_OK = 0;
 

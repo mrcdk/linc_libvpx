@@ -83,7 +83,11 @@ namespace linc {
           warn("EOF/Error %d", status);
         }
 
-        img = vpx_codec_get_frame(input->decoder, &iter);
+        if(status == 0) {
+          img = vpx_codec_get_frame(input->decoder, &iter);
+        } else {
+          img = NULL;
+        }
 
         /*
         {
@@ -100,6 +104,9 @@ namespace linc {
         unsigned char* rgba;
 
 
+        hx::Anon result = hx::Anon_obj::Create();
+        result->Add(HX_CSTRING("status"), status);
+
         if(img != NULL) {
           width = img->d_w;
           height = img->d_h;
@@ -111,6 +118,10 @@ namespace linc {
               img->planes[VPX_PLANE_V],img->stride[VPX_PLANE_V],
               rgba, width * comp, width, height
             );
+
+            ImgBytesData data = to_haxe_bytes(rgba, width * height * comp);
+            result->Add(HX_CSTRING("data"), data);
+
           } else {
             warn("Img format unknown");
           }
@@ -118,15 +129,10 @@ namespace linc {
           warn("No image decoded!");
         }
 
-        ImgBytesData data = to_haxe_bytes(rgba, width * height * comp);
-
-
-        hx::Anon result = hx::Anon_obj::Create();
-        result->Add(HX_CSTRING("status"), status);
         result->Add(HX_CSTRING("width"), width);
         result->Add(HX_CSTRING("height"), height);
         result->Add(HX_CSTRING("comp"), comp);
-        result->Add(HX_CSTRING("data"), data);
+
 
         return result;
 
